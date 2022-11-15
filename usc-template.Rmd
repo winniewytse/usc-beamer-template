@@ -1,0 +1,74 @@
+---
+title: | 
+  | Title (line 1)
+  | Title (line 2)
+short-title: "Short Title"
+author: "Author Name"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+bibliography: "reference.bib"
+output: 
+  beamer_presentation:
+    includes:
+      in_header: uscstyle.tex
+  fonttheme: "structurebold"
+  latex_engine: xelatex
+---
+
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+library(tidyverse)
+library(kableExtra)
+knitr::opts_chunk$set(echo = FALSE)
+theme_set(theme_bw())
+```
+
+# Section 1
+
+## Slide 1
+
+1. **bolding**, *italicizing*
+
+2. Putting a citation [@r2022]
+
+3. Putting an equation $\hat\beta = .3, 95\% \text{ CI} = [.1, .5]$
+    * Second level bullet item
+
+This is the beginning of a sentence. 
+How it looks without a "\\break". 
+\break
+How it looks after a "\\break". 
+\
+How it looks after a "\\". 
+
+\break
+How it looks after an extra line and a "\\break". 
+
+\
+How it looks after an extra line and a "\\". 
+    
+## Slide 2
+
+```{r echo=FALSE, fig.height = 2, fig.width = 3, fig.align='center'}
+x <- rnorm(1000, mean = .5, sd = 1)
+ggplot(data.frame(x = x), aes(x = x)) + 
+  geom_histogram(binwidth = .1)
+```
+
+Mean of the above distribution is `r mean(x)`. 
+
+## Slide 3
+
+:::: {.USCbox data-latex=""}
+::: {.center data-latex=""}
+Chunk title
+:::
+Chunk with emphasis
+::::
+
+
+## References {.allowframebreaks}
+
+
+
+
+
+

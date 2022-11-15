@@ -1,0 +1,66 @@
+\usetheme{Madrid}
+\useoutertheme{infolines} % Alternatively: miniframes, infolines, split
+\useinnertheme{circles}
+
+\definecolor{USCRed}{rgb}{0.59375, 0.003906, 0} % USC Red
+\definecolor{USCYellow}{rgb}{0.99609, 0.796875, 0.003906} % USC Yellow
+\definecolor{White}{rgb}{255, 255, 255}
+\definecolor{Black}{rgb}{0, 0, 0}
+
+\usecolortheme[named=USCRed]{structure}
+
+\pgfdeclareimage[height=0.5cm, width=1.33cm]{logo}{usclogo.png}
+\logo{\pgfuseimage{logo}}
+
+\title[MI Categorical]{Does Uniqueness Measurement Invariance Matter? \\ Valid Use of Observed Scores with Ordered-Categorical Indicators \\ in Group Comparisons and Regression Analyses}
+
+% Other packages
+\usepackage{fancyvrb}
+\usepackage{color,xcolor}
+\usepackage{framed}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{tcolorbox}
+
+% Margins
+\setbeamersize{text margin left=8mm,text margin right=8mm}
+
+% make code-output smaller
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{fontsize=\footnotesize,commandchars=\\\{\}}
+
+% make console-output smaller:
+\makeatletter
+\def\verbatim{\footnotesize\@verbatim \frenchspacing\@vobeyspaces \@xverbatim}
+\makeatother
+\setlength{\parskip}{0pt}
+\setlength{\OuterFrameSep}{-4pt}
+\makeatletter
+\preto{\@verbatim}{\topsep=-10pt \partopsep=-10pt }
+\makeatother
+
+% For better spacing between the list bullets
+\renewcommand{\tightlist}{\setlength{\itemsep}{1ex}\setlength{\parskip}{0pt}}
+
+\usepackage[fontsize=9pt]{scrextend}
+
+\newtcolorbox{USCbox}{
+  colback=White,
+  colframe=USCRed,
+  coltext=Black,
+  boxsep=2pt,
+  arc=2pt}
+  
+\newcommand{\bv}[1]{\boldsymbol{\mathbf{#1}}}  %APA-consistent bold
+
+\widowpenalties 1 150
